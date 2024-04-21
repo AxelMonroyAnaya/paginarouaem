@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../A_CSS/cv.css">
+</head>
+<body>
+    <img class="foto" src="../A_img/photo.jpg" alt="imagen axel" >
+    <div class="line"></div>
+    <div class="infos">
+        <p class="nom">Monroy Anaya Axel Alejandro</p>
+        <p class="info">"Estudiante en ing en sistemas y comunicaciones"</p>
+        <div class="line"></div>
+        <div id="hiper">
+            <p>
+                <a class="cv" href="../A_Doc/cv.pdf" target="contenido">cv</a>
+            </p>
+            <p>
+                <a href="../A_Videos/WIN_20240228_16_38_24_Pro.mp4" target="contenido">video</a>
+            </p>
+            <p>
+                <a href="mailto:amonroya003@uaemex.mx">correo institucional</a>
+            </p>
+            <p>
+                <a href="mailto:axelalejandromonroya@gmail.com">correo personal</a>
+            </p>
+        </div>
+    </div>
+    <div>
+        <div class="relojcl">
+            <br>
+            <script>
+                function currentTime() {
+                    let date = new Date();
+                    let hh = date.getHours();
+                    let mm = date.getMinutes();
+                    let ss = date.getSeconds();
+                    hh = (hh < 10) ? "0" + hh : hh;
+                    mm = (mm < 10) ? "0" + mm : mm;
+                    ss = (ss < 10) ? "0" + ss : ss;
+                    let time = hh + ":" + mm + ":" + ss;
+                    // Actualizar directamente el contenido en el mismo HTML
+                    let watch = document.getElementById("reloj");
+                    if (watch) {
+                        watch.innerHTML = time;
+                    }
+                }
+                setInterval(currentTime, 1000);
+            </script>
+            <h3>HORA DEL SISTEMA:</h3>
+            <div id="reloj"></div>
+        </div>
+    </div>
+</body>
+</html>

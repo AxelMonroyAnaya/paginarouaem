@@ -1,0 +1,26 @@
+
+.pedido-item {
+    background-color: green;
+    width: 200px; 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    list-style-type: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Trans suave */
+
+}
+.pedido-item:hover {
+    background-color: white; 
+    border-color: #87ceeb; 
+    color: black; 
+    box-shadow: 0 0 10px #87ceeb;
+    border: 10px;
+}
+
+
+.pedido-titulo {
+    font-weight: bold;
+    color: #333;
+}

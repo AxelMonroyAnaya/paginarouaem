@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Torta</title>
+    <link rel="stylesheet" href="../A_CSS/pedido.css">
+    <link rel="stylesheet" href="../A_CSS/menu.css">
+
+
+</head>
+<body>
+    <h2>Detalles del Pedido</h2>
+    <div id="pedidoContainer"></div>
+
+    <script>
+        flag =1;
+        window.onload = function() {
+            var detallesPedido = JSON.parse(localStorage.getItem('detallesPedido'));
+            var totalPedido = localStorage.getItem('totalPedido');
+
+            // Mostrar los detalles del pedido en la página
+            mostrarDetallesPedido(detallesPedido, totalPedido);
+        };
+
+        function mostrarDetallesPedido(detallesPedido, totalPedido) {
+            var pedidoHTML = '<ul>';
+
+            if (detallesPedido && detallesPedido.length > 0) {
+                detallesPedido.forEach(function(detalle) {
+                    // Mostrar solo las tortas con cantidad mayor a cero
+                    if (detalle.cantidad > 0) {
+                        pedidoHTML += '<li class="pedido-item">';
+                            pedidoHTML += '<span class="pedido-titulo">Nombre de la Torta:</span> ' + detalle.nombre + '<br>';
+                            pedidoHTML += '<span class="pedido-titulo">Cantidad:</span> ' + detalle.cantidad + '<br>';
+                            pedidoHTML += '<span class="pedido-titulo">Aderezo:</span> ' + (detalle.aderezo ? 'Sí' : 'No') + '<br>';
+                            pedidoHTML += '<span class="pedido-titulo">Topic:</span> ' + (detalle.topic ? 'Sí' : 'No') + '<br>';
+                            pedidoHTML += '<span class="pedido-titulo">Subtotal:</span> $' + detalle.subtotal + '<br>';
+                            pedidoHTML += '</li>';
+                    flag++;}
+                });
+            } else {
+                pedidoHTML += '<li>No se encontraron detalles del pedido.</li>';
+            }
+
+            pedidoHTML += '</ul>';
+
+            pedidoHTML += '<p>Total a Pagar: $' + totalPedido + '</p>';
+
+            // Mostrar el pedido en el contenedor
+            var pedidoContainer = document.getElementById("pedidoContainer");
+            if (pedidoContainer) {
+                pedidoContainer.innerHTML = pedidoHTML;
+            }
+        }
+    </script>
+    <script>
+        function pedidoBien(){
+            if(flag ==0){
+                alert("no hay pedido que realizar")
+            }else{
+                alert("el pedido ha sido aceptado")
+            }
+
+        }
+        function pedidoMal(){
+            alert("el pedido se ha cancelado")
+        }
+        
+    </script>
+    <button id="totalbut" onclick="pedidoBien(flag)">aceptar pedido</button>
+    <button id="totalbut" onclick="pedidoMal()">cancelar pedido</button>
+    <a id="totalbut" style="text-decoration: none;" href="tortas.html">cancelar y regresar</a>
+</body>
+</html>
