@@ -1,0 +1,62 @@
+.foto{
+    margin: auto;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+}
+.line{
+    width: 200px;
+    height: 20px;
+    background-color: gray;
+    margin: auto;
+    border-radius: 30px;
+}
+.nom{
+    font-size: 18px;
+    font-weight: bold;
+}
+.infos{
+    margin: auto;
+    text-align: center;
+}
+#alineacv{
+    display: block;
+    margin-bottom: 10px; 
+    text-align: center; 
+    text-decoration: none; 
+    color: blue;
+}
+.info{
+    margin-top: 10px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+body{
+    margin-left: auto;
+    text-align: center;
+}
+.relojcl{
+    margin-left: 20%;
+    transition: color 0.3s ease, border-color 0.3s ease; /* Agregado para agregar una transición gradual al cambio de color y borde */
+}
+#reloj{
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 4px solid black; /* Añad "solid" y se corrigiO la posicion del punto y coma */
+    color:  black; /* Añadido el valor para la propiedad "color" */
+    border-radius: 50%;
+    font-family: monospace;
+    transition: color 0.3s ease, border-color 0.3s ease; /* Agregado para agregar una transicion gradual al cambio de color y borde */
+}
+#reloj:hover {
+    color: cyan; /* Cambia el color al pasar el mouse sobre el elemento */
+    border-color: cyan; /* Cambia el color del borde al pasar el mouse sobre el elemento */
+}
+.relojcl:hover{
+    color: cyan; /* Cambia el color al pasar el mouse sobre el elemento */
+    border-color: cyan; /* Cambia el color del borde al pasar el mouse sobre el elemento */
+}

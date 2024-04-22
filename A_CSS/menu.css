@@ -1,0 +1,73 @@
+.menus{
+    background-color: aqua;
+    text-align: center;
+    border-radius: 20px;
+}
+.menus img{
+    width: 200px;
+    height: auto;
+}
+
+.menus h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.menus h2{
+    font-size: 40px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+#menu {
+    border-collapse: collapse; 
+    width: 100%;
+    font-family: Arial, sans-serif; 
+  }
+  
+  #menu th, #menu td {
+    text-align: left;
+    padding: 10px; 
+  }
+  
+  #menu th {
+    background-color: #f2f2f2; 
+    font-weight: bold; 
+  }
+  
+  #menu tr:nth-child(even) {
+    background-color: #f7f7f7; /* alternal los colores mediante la propiedad hijo para que se vea una separacion */
+  }
+  
+  #menu input[type="number"], #menu input[type="checkbox"] {
+    width: 30px; /* un width para la cantidad de inputs checkboxs */
+    text-align: center; /* Centramos el contenido de los imputs*/
+  }
+  
+  .top {
+    background-color: lightblue; 
+  }
+#total {
+    display: flex;
+    color: red; 
+    font-size: 18px;
+    font-weight: bold; 
+    border: 2px solid red; 
+    padding: 10px; 
+    background-color: #ffe6e6; 
+}
+#totalbut {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 50px;
+}
+#totalbut a {
+  text-decoration: none;
+  color: inherit;
+  background-color: red;
+  padding: 5px 10px;
+}
+#totalbut:hover {
+  background-color: #45a049;
+}
