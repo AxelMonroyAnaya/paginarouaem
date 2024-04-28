@@ -13,7 +13,7 @@
     $minutos = 0;
     $segundos = 0;
 
-    echo "<h2>Usando el bucle for:</h2>";
+    echo "<h2>cronometro:</h2>";
     for ($horas = 0; $horas <= 23; $horas++) {
         $minutos = 0;
         while ($minutos <= 59) {
