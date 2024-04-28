@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,12 +29,17 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     echo "<h3>Usuarios del servidor (excepto ROOT):</h3>";
     while ($row = $result->fetch_assoc()) {
+
         echo '<div class="user">' . $row["user"] . '</div>';
     }
     echo "<br><br>lista de usuarios.";
     echo '<a href="desconectar.php">Desconectar</a>';
 
     
+        echo "<br>- " . $row["user"];
+    }
+    echo "<br><br>lista de usuarios.";
+
 } else {
     echo "<br><br>No se encontraron usuarios (excepto ROOT) en el servidor.";
 }
