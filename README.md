@@ -1,2 +1,2 @@
->.[!NOTE].
->esto es una nota
+> **Nota:**
+> Esto es una nota.
